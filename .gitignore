@@ -1,3 +1,4 @@
+dataset/*
 *.py[cod]
 *.c
 *.so
@@ -6,4 +7,4 @@ __pycache__/
 .coverage.*
 build/
 .eggs/
-src/*.egg-info
+Anaconda*

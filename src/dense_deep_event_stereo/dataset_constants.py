@@ -3,6 +3,7 @@
 import os
 
 DISPARITY_MULTIPLIER = 7.0
+# DISPARITY_MULTIPLIER = 1.0
 TIME_BETWEEN_EXAMPLES = 0.05  # sec
 EXPERIMENTS = {
     'indoor_flying': [1, 2, 3, 4],
@@ -46,6 +47,10 @@ def experiment_paths(experiment_name, experiment_number, dataset_root):
         paths[camera]['event_file'] = os.path.join(
             paths[camera]['event_folder'], '%0.6i.npy')
 
+    paths['odom_folder'] = os.path.join(paths['experiment_folder'],
+                                            'odometry')
+    paths['odom_file'] = os.path.join(paths['odom_folder'],
+                                            '%0.6i.txt')
     paths['timestamps_file'] = os.path.join(paths['experiment_folder'],
                                             'timestamps.txt')
     paths['disparity_folder'] = os.path.join(paths['experiment_folder'],
