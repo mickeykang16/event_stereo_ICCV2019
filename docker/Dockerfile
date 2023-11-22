@@ -36,4 +36,7 @@ RUN mkdir -p /home/mvsec_data
 RUN pip install pycryptodomex
 RUN pip install gnupg
 RUN pip install pyclick
+RUN pip install opencv-python
+# RUN pip install torch==1.13.1
+# torchvision==0.11.2+cu113 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 CMD ["home/user/ws/docker_start.sh"]
